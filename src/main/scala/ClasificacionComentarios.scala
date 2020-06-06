@@ -22,9 +22,15 @@ object ClasificacionComentarios {
     imprimirCategoria(clasificador("No me gusta el pizza!"))
     imprimirCategoria(clasificador("Me encanta la vida que tengo!"))
     imprimirCategoria(clasificador("No me gusta el clima!"))
-    imprimirCategoria(clasificador("Que buen clima hay en Villa Rica!"))
+    imprimirCategoria(clasificador("Que buen clima hay en Villarica!"))
     imprimirCategoria(clasificador("Super bueno el trabajo que realizaste!"))
     imprimirCategoria(clasificador("Es mala la cerveza cuando no esta helada!"))
+    imprimirCategoria(clasificador("Agradezco la ayuda que me dierón mis compañeros"))
+    imprimirCategoria(clasificador("La aplicación no compila!"))
+    imprimirCategoria(clasificador("Rompiste los juguetes!"))
+    imprimirCategoria(clasificador("El servicio de VTR es vergonzoso"))
+    imprimirCategoria(clasificador("Que bueno que llego el encargo"))
+    imprimirCategoria(clasificador("Que mal que todabia no envian la encomienda"))
   }
 
   /**
@@ -65,6 +71,7 @@ object ClasificacionComentarios {
 
       val resultados = categorizador.categorize(doc)
       resultados.foreach(print)
+      print(s" | $valor")
       val categoria = categorizador.getBestCategory(resultados)
       categoria
     case None => "-1"
